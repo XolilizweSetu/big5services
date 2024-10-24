@@ -3,49 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Page</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="new.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto&display=swap" rel="stylesheet">
-    
-    
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
+
+    <!-- Your App's JS -->
+    <script src="app.js" defer></script>
 </head>
 <body>
     <div class="reg">
         <h1>Sign-Up</h1>
-        <form action="index.html" method="post" onsubmit="validateForm(event)"> 
-            <p>Full Name:</p>
-            <input type="text" name="fname" placeholder="Enter full name" required>
-            <p>Last Name:</p>
-            <input type="text" name="lname" placeholder="Enter last name" required>
-            <p>Cellphone Number:</p>
-            <input type="tel" name="number" minlength="10" maxlength="10" placeholder="Enter cellphone number" required>
+        <form id="signup-form">
+            <p>Name:</p>
+            <input type="text" id="name" required>
             <p>Email:</p>
-            <input type="email" name="email" placeholder="Enter email" required>
+            <input type="email" id="email" required>
+            <p>Phone Number:</p>
+            <input type="tel" id="phone" required>
             <p>Password:</p>
-            <input type="password" id="password" name="password" minlength="4" required>
+            <input type="password" id="password" required>
             <p>Confirm Password:</p>
-            <input type="password" id="confirmPassword" minlength="4" required><br><br>
-            <div class="btn"> 
-                <button type="button" onclick="window.location.href='Signin.html'">Back</button>
-                <button type="submit">Sign Up</button>
-            </div>
+            <input type="password" id="confirm-password" required>
+            <button type="button" onclick="window.location.href='Signin.html'"><b>Back</b></button>
+            <button type="submit" id="submitSignUp">Sign Up</button>
+            <p id="error-message" class="messageDiv"></p>
+            <p id="success-message" class="messageDiv"></p>
         </form>
     </div>
-    <script>
-        function validateForm(event) {
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-
-            if (password !== confirmPassword) {
-                event.preventDefault(); 
-                alert("Your passwords do not match. Please try again.");
-                return false;
-            }
-            return true;
-        }
-    </script>
 </body>
 </html>
