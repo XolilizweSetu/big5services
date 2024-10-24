@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="new.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <div class="reg">
+        <h1>Sign-Up</h1>
+        <form action="index.html" method="post" onsubmit="validateForm(event)"> 
+            <p>Full Name:</p>
+            <input type="text" name="fname" placeholder="Enter full name" required>
+            <p>Last Name:</p>
+            <input type="text" name="lname" placeholder="Enter last name" required>
+            <p>Cellphone Number:</p>
+            <input type="tel" name="number" minlength="10" maxlength="10" placeholder="Enter cellphone number" required>
+            <p>Email:</p>
+            <input type="email" name="email" placeholder="Enter email" required>
+            <p>Password:</p>
+            <input type="password" id="password" name="password" minlength="4" required>
+            <p>Confirm Password:</p>
+            <input type="password" id="confirmPassword" minlength="4" required><br><br>
+            <div class="btn"> 
+                <button type="button" onclick="window.location.href='Signin.html'">Back</button>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function validateForm(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault(); 
+                alert("Your passwords do not match. Please try again.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

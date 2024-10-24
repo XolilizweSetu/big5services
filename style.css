@@ -1,0 +1,698 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif, Arial;
+  background-color: #ede3c2;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 20px;
+}
+
+/*------------------------------------------------------------------------------NAVIGATION BAR----------------------------------------------------------------------------------*/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the header stays above other elements */
+  background-color: white; /* Set a background color so it's clearly visible */
+  box-shadow: 0 4px 2px -2px gray; /* Optional: Adds a slight shadow for better visibility */
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 15px 30px;
+}
+
+.navigationbar {
+    /* Removing the bullets */
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    /*Sticky Navigation Bar*/
+    position: -fixed;
+    top: 0; /* Ensure the nav sticks to the top */
+    z-index: 999;
+}
+
+.navigationbar li {
+    margin-left: 20px;
+}
+
+.navigationbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+.navigationbar li a:hover {
+    background-color: #C6A641;
+}
+
+.navigationbar h2 {
+    color: white;
+    margin: 0;
+}
+
+.active {
+    background-color: #C6A641;
+}
+
+.homelink {
+  text-decoration: none;
+  color: white;
+}
+
+.homelink span {
+  color: #C6A641;
+}
+
+/*------------------------------------------------------------------------------REGISTER AND LOGIN---------------------------------------------------------------------------------*/
+
+#getlogin h2 {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 50px;
+  }
+  
+  #getregister h2 {
+    text-align: center;
+    font-size: 50px;
+    }
+
+
+  .connect-input {
+      text-align: center;
+      border-radius: 5px;
+  }
+ 
+  
+    .send-button button {
+        background-color: #C6A641;
+        color: #FDF4E3;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 60%;
+        margin-left: 20%;
+  
+    }
+  
+    .send-button button:hover {
+      background-color: #ddd6d8b6;
+    }
+    
+    .wrapper-main{
+      width: 1000px;
+      margin: 0  auto;
+    }
+  
+    .reg-link {
+     margin-left:2% ;
+     font-size: 15px;
+    }
+
+    #checkbox-remember {
+      width: 20px;
+      height: 20px ;
+    }
+/*------------------------------------------------------------------------------FORGET PASSWORD----------------------------------------------------------------------------------------*/
+
+.forget-password {
+  margin-top: 3%;
+}
+/*------------------------------------------------------------------------------WELCOME PAGE----------------------------------------------------------------------------------------*/
+
+#gethome {
+  padding-top: 80px;
+  height: 600px;
+}
+.welcomehome h2{
+   text-align: center;
+  font-size: 2.3em;
+  /* Additional space from the top */
+  padding-top: 20px;
+
+}
+
+.welcomehome p{
+  padding-top: 20px; 
+
+}
+
+.welcomehome i{
+  text-align: center;
+}
+
+.home-container {
+  padding: 10px 0;
+  /* Centering the container itself */
+  display: flex;
+  justify-content: center;
+}
+
+.home-service {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; 
+  max-width: 1200px; 
+  width: 100%; 
+  /* Centers the container horizontally and adds space at the top */
+  margin: 20px auto 0 auto; 
+  /* Additional space from the top */
+  padding-top: 60px; 
+}
+
+.our-services {
+  width: 24%; 
+  box-sizing: border-box;
+  margin: 0.5%; 
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.637);
+}
+
+.our-services img {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover; 
+}
+
+
+
+/*------------------------------------------------------------------------------SERVICES-----------------------------------------------------------------------------------------------*/
+
+#getservices {
+  padding-top: 80px;
+}
+ h1{
+  text-align: center;
+ font-size: 2.3em;
+
+}
+.first-services {
+    /* padding-top: 120px;  */
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+  
+.services  {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.637);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    margin-left: 5%;
+    
+}
+
+.container {
+    text-align: center;
+    padding: 10px 20px;   
+}
+
+.gallery:hover {
+    opacity: 0.7;
+}
+/*------------------------------------------------------------------------------LOGOUT-------------------------------------------------------------------------------------------------*/
+
+.button:hover {
+  background-color: #ede3c2;
+}
+
+.button {
+    background-color: #C6A641;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.logout {
+    background-color: #C6A641;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 5px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+    /* Position the button absolutely */
+    position: relative;  
+    /* Align with the top of the container */
+    top: 0;  
+    /* Align to the right corner */
+    left: 0%;  
+    
+}
+
+.logout:hover {
+  background-color: #ede3c2;
+}
+ 
+/*Subscription Section*/
+/*------------------------------------------------------------------------------SUBSCRIPTION------------------------------------------------------------------------------------*/
+
+#getsubscription {
+  /* padding: 10px 10px; */
+  padding-top: 80px;
+}
+
+.topsub p {
+  justify-content: center;
+  margin-left: 43rem;
+} 
+  .subscription-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscription-content-one {
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscription-content-two {
+    display: flex;
+    justify-content: center;
+  }
+   
+  .subscription-box-one {
+    background-color: rgba(255, 255, 255, 0.637);
+    /* Increased padding to make the box bigger */
+    padding: 10px 30px;
+    /* Rounded corners */ 
+    border-radius: 20px;
+     /* Increased width to make the box bigger */
+    width: 700px;
+    height: 600px;
+    border: 2px solid #C6A641 ;
+
+  }
+
+  .subscription-box-one h2 {
+    margin-left: 16rem;
+  }
+
+  .subscription-box-two h2 {
+    margin-left: 16rem;
+  }
+   
+  .subscription-box-two {
+    background-color: rgba(255, 255, 255, 0.637);
+    /* Increased padding to make the box bigger */
+    padding: 10px 30px; 
+    /* Rounded corners */
+    border-radius: 20px;
+    /* Increased width to make the box bigger */
+    width: 700px; 
+    height: 600px;
+    border: 2px solid #C6A641 ;
+
+  }
+  
+  .subscription-container {
+     /* This sets the children to align in a row */
+    display: flex;
+    /*Adds space between the two divs */
+    justify-content: space-between; 
+    /*Space between the divs */
+    gap: 0; 
+
+}
+
+.subscription-content-one,
+.subscription-content-two {
+    flex: 1; 
+    
+}
+  .subscription-button {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .subscription-button {
+    background-color: #C6A641;
+    width: 5rem;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 10px;
+  }
+
+  .subscription-button a {
+    text-decoration: none;
+    color: white;
+}
+  
+.subscription-button:hover {
+  background-color: #ede3c2;
+}
+ 
+.subscription-button a:hover {
+  color: #333;
+}
+
+.savebtn button {
+  background-color: #C6A641;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.carwash-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #333;
+  gap: 20px;
+}
+
+.housekeeping-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #333;
+  gap: 20px;
+}
+
+.basic-plan {
+  height: 220px;
+  width: 20rem;
+  background-color: #ede3c2;
+  border: 2px solid #C6A641 ;
+  border-radius: 8px;
+  margin: 2%;
+}
+
+.standard-plan {
+  height: 220px;
+  width: 20rem;
+  background-color: #ede3c2;
+  border: 2px solid #C6A641;
+  margin: 2%;
+  border-radius: 8px;
+
+}
+
+.premium-plan {
+  height: 220px;
+  width: 20rem;
+  background-color: #ede3c2;
+  border: 2px solid #C6A641;
+  border-radius: 8px;
+  margin: 2%;
+
+}
+
+.advanced-plan {
+  height: 220px;
+  width: 20rem;
+  background-color: #ede3c2;
+  border: 2px solid #C6A641;
+  border-radius: 8px;
+  margin: 2%;
+
+}
+
+.carwash-container ul {
+  /* Removing the bullets */
+  list-style-type: none;
+  /* Removing the browser default settings */
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+  font-size: small;
+
+}
+
+.housekeeping-container ul {
+    /* Removing the bullets */
+    list-style-type: none;
+    /* Removing the browser default settings */
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    font-size: small;
+}
+
+.carwash-container p{
+  font-size: 20px;
+  margin-left: 10px;
+
+}
+
+.housekeeping-container p {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+/*------------------------------------------------------------------------------ABOUT US-------------------------------------------------------------------------------------------*/
+
+#about-us {
+  padding-top: 80px;
+}
+.about-us {
+  padding: 20px;
+  background-color: #ede3c2;
+  margin: 0 20px;
+  border-radius: 10px;
+}
+
+.about-us h2 {
+  text-align: center;
+  font-weight: 700px;
+}
+
+.vision-mission {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.vision, .mission {
+  width: 47%;
+  justify-content: space-around;
+  background-color: #e5d5a0;
+  padding: 15px;
+  margin: 2%;
+  border: 2px solid #C6A641;
+  border-radius: 10px;
+}
+
+.who-we-are {
+  padding: 20px;
+  background-color:#ede3c2  ;
+  margin: 20px;
+}
+
+.who-we-are h2 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-member {
+  text-align: center;
+  width: 18%;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  width: 100%;
+  height: 22rem;
+  border-radius: 10px;
+
+}
+
+
+.team-member p {
+  margin: 5px 0;
+  font-weight: 600;
+}
+
+  
+/*------------------------------------------------------------------------------CONTACT US--------------------------------------------------------------------------------------*/
+
+#getcontacts {
+  padding-top: 80px;
+}
+
+.contactus-content {
+  display: flex;
+  justify-content: center;
+}
+
+.contactus-box {
+  background-color: rgba(255, 255, 255, 0.637);
+  /* Increased padding to make the box bigger */
+  padding: 70px; 
+  /* Rounded corners */
+  border-radius: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Increased width to make the box bigger */
+  max-width: 700px; 
+  width: 200%;
+  border: 2px solid #C6A641 ;
+  margin-bottom: 60px;
+
+}
+
+.connect {
+  font-size: 1.2em;
+}
+.contact-us p{
+  text-align: center;
+}
+
+
+.cntct {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type=text] {
+  padding: 10px 18px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: 2px solid #C6A641 ;
+  border-radius: 4px;
+  background-color: white;
+}
+
+input[type=email] {
+  padding: 10px 18px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: 2px solid #C6A641 ;
+  border-radius: 4px;
+  background-color: white;
+}
+
+
+textarea{
+  padding: 10px 18px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: 2px solid #C6A641 ;
+  border-radius: 4px;
+  background-color: white;
+  height: 250px;
+}
+
+.cntct-btn {
+  background-color:#C6A641;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 90%;
+  text-align: center;
+
+}
+
+.send-button button:hover {
+background-color: #ddd6d8b6;
+}
+/*------------------------------------------------------------------------------FOOTER---------------------------------------------------------------------------------------------*/
+
+footer {
+  /* Background color of the footer */
+  background-color: #333; 
+  /* Text color */
+  color: #fff;  
+  /* Space inside the footer */         
+  padding: 15px 0;  
+  /* Center-align text */      
+  text-align: center;     
+}
+
+.footer-content {
+  /* Max width of the content inside the footer */
+  max-width: 1000px; 
+  /* Center the footer content horizontally */
+  margin: 0 auto;
+  /* Space around the footer content */    
+  padding: 20px;     
+}
+
+.footer-content p{
+  color: white;
+}
+
+.footer-content a{
+  color: white;
+}
+
+.footer-social-media {
+  /* Space above the social media icons */
+  margin-top: 10px;  
+}
+
+.footer-social-media a {
+   /* Color of the social media icons */
+  color: #fff;      
+  /* Space between the icons */
+  margin: 0 10px;    
+  /* Size of the icons */
+  font-size: 24px;   
+}
+
+.footer-social-media a:hover {
+  /* Color of icons on hover */
+  color: #ddd;       
+}
+
