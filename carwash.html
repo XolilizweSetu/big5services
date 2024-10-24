@@ -1,142 +1,190 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  CareonCall Carwash </title>
+    <title>CareonCall Carwash</title>
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="carwash.js"></script>
+    <style>
+        .gray {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease; /* Smooth transition */
+        }
+    </style>
 </head>
 <body>
 
-    <!---------------------------------------------------------------------NAVIGATION BAR------------------------------------------------------------------------------------------------------------>
     <div>
         <ul class="navigationbar">
             <h2><a href="index.html" class="homelink">Care<span>OnCall</span></a></h2>
             <li><a href="login.html" class="logout">Logout</a></li>
-            <li><a href="index.html#getservices">Services</a></li>
             <li><a href="index.html">Home</a></li>
-            
-
-  
         </ul>
+    </div>
+<div class="carwash">
+    <h1>Car Wash</h1>
+</div>
 
-        <div class="carwash">
-            <h1>CAR WASH</h1>
-
+<div class="services">
+    <div class="our-services">
+        <a href="#" class="car-option" data-price="80">
+            <img src="img/view-cool-motorcycle.avif" alt="Motorbike" class="gallery" id="motorbikeImg" style="width:100%;" height="150">
+        </a>
+        <div class="home-container">
+            <h3>Motorbike - R80</h3>
         </div>
-
-
-        <div class="services">
-            
-            <div class="our-services">
-                <img src="img/view-cool-motorcycle.avif" atl="Request" class="gallery" style="width:100%;">
-                <div class="home-container">
-                    <h3>Motorbike - R80.00</h3>
-                </div>
-             </div>
-             <div class="our-services">
-                <img src="img/3d-car.avif" atl="deliverman" class="gallery" style="width:100%;" height="150">
-                <div class="home-container">
-                    <h3>Sedan - R100.00</h3>
-                </div>
-             </div>
-             <div class="our-services">
-                <img src="img/view-3d-car.avif" atl="convenient" class="gallery" style="width:100%;">
-                <div class="home-container">
-                    <h3>SUV - R180.00</h3>
-                </div>
-             </div>
-             <div class="our-services">
-                <img src="img/Mercedes-Benz-V-Class-Black-Crystal-Larte.webp" atl="5startserives" class="gallery" style="width:100%;">
-                <div class="home-container">
-                    <h3>Minibus - R220.00</h3>
-                </div>
-             </div>
     </div>
-<form class="myform">
-    <table class="carwash-table">
+    <div class="our-services">
+        <a href="#" class="car-option" data-price="100">
+            <img src="img/3d-car.avif" alt="Sedan" class="gallery" id="sedanImg" style="width:100%;" height="150">
+        </a>
+        <div class="home-container">
+            <h3>Sedan - R100</h3>
+        </div>
+    </div>
+    <div class="our-services">
+        <a href="#" class="car-option" data-price="180">
+            <img src="img/view-3d-car.avif" alt="SUV" class="gallery" id="suvImg" style="width:100%;" height="150">
+        </a>
+        <div class="home-container">
+            <h3>SUV - R180</h3>
+        </div>
+    </div>
+    <div class="our-services">
+        <a href="#" class="car-option" data-price="220">
+            <img src="img/Mercedes-Benz-V-Class-Black-Crystal-Larte.webp" alt="Minibus" class="gallery" id="minibusImg" style="width:100%;" height="150">
+        </a>
+        <div class="home-container">
+            <h3>Minibus - R220</h3>
+        </div>
+    </div>
+</div>
+
+<table class="carwash-table">
+    <tr>
         <th>CART <hr><br></th>
-        
-        <tr>
-            <th>Motorbike </th>
-            <th>
-                       
-            <select class="price" onchange="calcTotal()" id="bike"> 
+    </tr>
+    <tr>
+        <td>Motorbike</td>
+        <td>
+            <select id="motorbike">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </th>
             </select>
-        </tr>
-
-        <tr>
-            <th>Sedan</th>
-            <th>
-            <select class="price" onchange="calcTotal()" id="sedan" >
+        </td>
+    </tr>
+    <tr>
+        <td>Sedan</td>
+        <td>
+            <select id="sedan">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </th>
             </select>
-        </tr>
-
-        <tr>
-            <th>SUV</th>
-            <th>
-            <select class="price" onchange="calcTotal()" id="suv">
+        </td>
+    </tr>
+    <tr>
+        <td>SUV</td>
+        <td>
+            <select id="suv">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </th>
             </select>
-        </tr>
-
-
-        <tr>
-            <th>Minibus</th>
-            <th>
-            <select class="price" onchange="calcTotal()" id="minibus">
+        </td>
+    </tr>
+    <tr>
+        <td>Minibus</td>
+        <td>
+            <select id="minibus">
                 <option value="0">0</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </th>
             </select>
-        </tr>
-    </table>
+        </td>
+    </tr>
+</table>
 
-    <table class="total-table">
-        <tr>
-            <th><hr>TOTAL<hr></th>
-            <th>
-                <label>R</label>
-                <label id="totalCalc"  class="totalCalc">0</label>
-                <label id="totalCalc"  class="totalCalc">.00</label>
+<table class="total-table">
+    <tr>
+        <th><hr>TOTAL<hr></th>
+        <th><label id="totalPrice">R 0.00</label></th>
+    </tr>
+</table>
 
-            </th>
-        </tr>
-    </table>
+<div class="checkout">
+    <a href="payment.html" class="button">Checkout</a>
+</div>
+</div>
 
-    
-    <div class="checkout">
-        <a href="payment.html" class="button">Checkout</a>
-    </div>
-    </div>
-</form>
+<script>
+// Car prices
+const carPrices = {
+    motorbike: 80,
+    sedan: 100,
+    suv: 180,
+    minibus: 220
+};
 
-</body>
-</html>
+// Function to update the total price
+function updateTotalPrice() {
+    let total = 0;
+
+    // Get selected quantities
+    const motorbikeCount = parseInt(document.getElementById('motorbike').value);
+    const sedanCount = parseInt(document.getElementById('sedan').value);
+    const suvCount = parseInt(document.getElementById('suv').value);
+    const minibusCount = parseInt(document.getElementById('minibus').value);
+
+    // Calculate total based on quantities
+    total += motorbikeCount * carPrices.motorbike;
+    total += sedanCount * carPrices.sedan;
+    total += suvCount * carPrices.suv;
+    total += minibusCount * carPrices.minibus;
+
+    // Update total price display
+    document.getElementById('totalPrice').textContent = 'R ' + total.toFixed(2);
+}
+
+// Function to handle image selection
+function selectCar(option) {
+    const selectedClass = 'gray';
+    const images = document.querySelectorAll('.gallery');
+
+    // Remove gray effect from all images
+    images.forEach(img => img.classList.remove(selectedClass));
+
+    // Add gray effect to the selected image
+    const selectedImage = option.querySelector('img');
+    selectedImage.classList.add(selectedClass);
+}
+
+// Add event listeners to the car options
+document.querySelectorAll('.car-option').forEach(option => {
+    option.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
+        selectCar(this); // Call selectCar with the clicked option
+        updateTotalPrice(); // Update total price
+    });
+});
+
+// Add event listeners to the select elements for quantity changes
+document.querySelectorAll('select').forEach(select => {
+    select.addEventListener('change', updateTotalPrice);
+});
+</script>
