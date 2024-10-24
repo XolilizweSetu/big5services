@@ -487,71 +487,74 @@ header {
 #about-us {
   padding-top: 80px;
 }
-.about-us {
+
+#about-us h2 {
+  margin-left: 50rem;
+  font-size: 2.5rem;
+}
+
+.about-container {
   padding: 20px;
   background-color: #ede3c2;
   margin: 0 20px;
   border-radius: 10px;
 }
 
-.about-us h2 {
+.about-container h2 {
   text-align: center;
-  font-weight: 700px;
+  font-weight: 700;
 }
 
-.vision-mission {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  border-radius: 10px;
+.team-container {
+  margin-top: 40px; /* Increased margin for better spacing */
 }
 
-.vision, .mission {
-  width: 47%;
-  justify-content: space-around;
-  background-color: #e5d5a0;
-  padding: 15px;
-  margin: 2%;
-  border: 2px solid #C6A641;
-  border-radius: 10px;
-}
-
-.who-we-are {
-  padding: 20px;
-  background-color:#ede3c2  ;
-  margin: 20px;
-}
-
-.who-we-are h2 {
+.team-header h2 {
   text-align: center;
-  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-.team {
+.member-container {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .team-member {
   text-align: center;
   width: 18%;
   margin-bottom: 20px;
+  flex: 1 1 18%; /* Flex properties for responsiveness */
 }
 
 .team-member img {
   width: 100%;
-  height: 22rem;
+  height: auto; /* Adjust height for better aspect ratio */
   border-radius: 10px;
-
 }
 
+.team-member figcaption {
+  padding: 10px; /* Add padding for better spacing */
+}
 
 .team-member p {
   margin: 5px 0;
   font-weight: 600;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team-member {
+      width: 45%; /* Adjust to 45% on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+      width: 90%; /* Adjust to 90% on very small screens */
+  }
+}
+
 
   
 /*------------------------------------------------------------------------------CONTACT US--------------------------------------------------------------------------------------*/
