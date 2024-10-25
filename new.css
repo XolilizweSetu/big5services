@@ -80,3 +80,79 @@ button[type="submit"] {
 .forgotP a{
     text-decoration: none;
 }
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    body {
+        height: auto; /* Allow body height to adjust */
+        padding: 20px; /* Add padding to prevent edges from touching */
+    }
+
+    .reg {
+        padding: 15px; /* Reduce padding */
+        box-shadow: none; /* Remove shadow for simplicity */
+        border-radius: 5px; /* Adjust border radius */
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%; /* Full width on mobile */
+    }
+
+    button {
+        width: 100%; /* Full width for buttons */
+    }
+
+    .btn {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center buttons */
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    .reg {
+        max-width: 400px; /* Reduce max width */
+        padding: 20px; /* Maintain padding */
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+        width: 95%; /* Slightly less width */
+    }
+
+    button {
+        width: 100%; /* Full width for buttons */
+    }
+
+    .btn {
+        flex-direction: row; /* Row layout for buttons */
+        justify-content: space-between; /* Space between buttons */
+    }
+}
+
+/* Desktops */
+@media (min-width: 901px) {
+    .reg {
+        max-width: 500px; /* Maintain max width */
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+        width: 97%; /* Maintain width */
+    }
+
+    .btn {
+        justify-content: space-between; /* Keep original layout */
+    }
+
+    button {
+        width: auto; /* Default button width */
+    }
+}

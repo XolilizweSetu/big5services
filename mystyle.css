@@ -87,3 +87,67 @@ form .btn:hover{
     margin-top: 0px;
     filter: drop-shadow(0 0 1px #000);
 }
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .container form {
+        width: 100%; /* Full width on mobile */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .column {
+        flex: 1 1 auto; /* Allow columns to stack */
+    }
+
+    form .btn {
+        width: 100%; /* Full width for buttons */
+        margin-top: 15px; /* Space above the button */
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+    .container form {
+        width: 90%; /* Slightly reduce max width */
+    }
+
+    .row {
+        flex-direction: row; /* Maintain row layout */
+    }
+
+    .column {
+        flex: 1 1 45%; /* Adjust column width */
+    }
+
+    form .btn {
+        width: auto; /* Default button width */
+        margin-top: 15px; /* Space above the button */
+    }
+}
+
+/* Desktops */
+@media (min-width: 901px) {
+    .container form {
+        width: 700px; /* Maintain original width */
+    }
+
+    .row {
+        flex-direction: row; /* Ensure row layout */
+    }
+
+    .column {
+        flex: 1 1 250px; /* Original column width */
+    }
+
+    form .btn {
+        width: 19rem; /* Maintain button width */
+    }
+}

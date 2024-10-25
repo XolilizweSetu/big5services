@@ -1,135 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>  CareonCall Carwash </title>
+    <title>CareonCall Carwash</title>
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-    <!---------------------------------------------------------------------NAVIGATION BAR------------------------------------------------------------------------------------------------------------>
-
-
     <div>
         <ul class="navigationbar">
             <h2><a href="index.html" class="homelink">Care<span>OnCall</span></a></h2>
             <li><a href="login.html" class="logout">Logout</a></li>
-            <li><a href="index.html#getservices">Services</a></li>
             <li><a href="index.html">Home</a></li>
-  
         </ul>
 
         <div class="carwash">
             <h1>HOUSEKEEPING</h1>
-
         </div>
-
 
         <div class="services">
             <div class="our-services">
-                <img src="img/bachelor.jfif" atl="Request" class="gallery" style="width:100%;">
+                <a href="#"class="house-option" data-price="500"><img src="img/bachelor.jfif" alt="bachelor" class="gallery" style="width:100%;" height="150"></a>
                 <div class="home-container">
                     <h3>Bachelor - R500</h3>
+                    
                 </div>
-             </div>
-             <div class="our-services">
-                <img src="img/standhouse.jfif" atl="deliverman" class="gallery" style="width:100%;" height="150">
+            </div>
+            <div class="our-services">
+                <a href="#"class="house-option" data-price="700"><img src="img/standhouse.jfif" alt="Standard house" class="gallery" style="width:100%;" height="150"></a>
                 <div class="home-container">
-                    <h3>Standardhouse - R700</h3>
+                    <h3>Standard House - R700</h3>
+                    
                 </div>
-             </div>
-             <div class="our-services">
-                <img src="img/penthouse.jfif" atl="convenient" class="gallery" style="width:100%;">
+            </div>
+            <div class="our-services">
+                <a href="#"class="house-option" data-price="1500"><img src="img/penthouse.jfif" alt="Standard house" class="gallery" style="width:100%;" height="150"></a>
                 <div class="home-container">
-                    <h3>Penthouse - 1500</h3>
+                    <h3>Penthouse - R1500</h3>
+                    
                 </div>
-             </div>
-             <div class="our-services">
-                <img src="img/mansion.jfif" atl="5startserives" class="gallery" style="width:100%;">
+            </div>
+            <div class="our-services">
+                <a href="#"class="house-option" data-price="2000"><img src="img/mansion.jfif" alt="Standard house" class="gallery" style="width:100%;" height="150"></a>
                 <div class="home-container">
-                    <h3>Mansion - R2000</h3>
+                    <h3>Mansion House - R2000</h3>
+                    
                 </div>
-             </div>
+            </div>
+        </div>
+
+        <table class="carwash-table">
+            <tr>
+                <th>CART <hr><br></th>
+            </tr>
+            <tr>
+                <td>Bedrooms</td>
+                <td>
+                    <select id="bedrooms">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Bathrooms</td>
+                <td>
+                    <select id="bathrooms">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Kitchen</td>
+                <td>
+                    <select id="kitchen">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Balcony</td>
+                <td>
+                    <select id="balcony">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+
+        <table class="total-table">
+            <tr>
+                <th><hr>TOTAL<hr></th>
+                <th><label id="totalPrice">R 0.00</label></th>
+            </tr>
+        </table>
+
+        <div class="checkout">
+            <a href="payment.html" class="button">Checkout</a>
+        </div>
     </div>
-    </div>
-    <table class="carwash-table">
-        <th>CART <hr><br></th>
+
+    <script>
+        let basePrice = 0;
+        const roomPrice = {
+            bedroom: 100,  
+            bathroom: 80,   
+            kitchen: 120,  
+            balcony: 50     
+        };
+        function updateTotalPrice() {
+            let total = basePrice;
+            
+            const bedrooms = document.getElementById('bedrooms').value;
+            const bathrooms = document.getElementById('bathrooms').value;
+            const kitchen = document.getElementById('kitchen').value;
+            const balcony = document.getElementById('balcony').value;
+
+            
+            total += bedrooms * roomPrice.bedroom;
+            total += bathrooms * roomPrice.bathroom;
+            total += kitchen * roomPrice.kitchen;
+            total += balcony * roomPrice.balcony;
+
+            document.getElementById('totalPrice').textContent = 'R ' + total.toFixed(2);
+        }
+
+        const houseOptions = document.querySelectorAll('.house-option');
+houseOptions.forEach(option => {
+    option.addEventListener('click', function() {
+        basePrice = parseInt(this.getAttribute('data-price')); // Set base price to the selected house
+        updateTotalPrice(); // Update total price
         
-        <tr>
-            <th>Bedrooms </th>
-            <th>
-                       
-            <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </th>
-            </select>
-        </tr>
+        // Highlight the selected house
+        houseOptions.forEach(opt => opt.classList.remove('selected')); // Remove previous selections
+        this.classList.add('selected'); // Highlight the selected house
+    });
+});
 
-        <tr>
-            <th>Bathrooms</th>
-            <th>
-            <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </th>
-            </select>
-        </tr>
+        
+        document.getElementById('bedrooms').addEventListener('change', updateTotalPrice);
+        document.getElementById('bathrooms').addEventListener('change', updateTotalPrice);
+        document.getElementById('kitchen').addEventListener('change', updateTotalPrice);
+        document.getElementById('balcony').addEventListener('change', updateTotalPrice);
+    </script>
 
-        <tr>
-            <th>Kitchen</th>
-            <th>
-            <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </th>
-            </select>
-        </tr>
-
-
-        <tr>
-            <th>Balcony</th>
-            <th>
-            <select>
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </th>
-            </select>
-        </tr>
-    </table>
-
-    <table class="total-table">
-        <tr>
-            <th><hr>TOTAL<hr></th>
-            <th>
-                <label><hr>R 0.00<hr></label>
-            </th>
-        </tr>
-    </table>
-
-    
-    <div class="checkout">
-        <a href="payment.html" class="button">Checkout</a>
-    </div>
-    </div>
 </body>
 </html>
