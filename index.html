@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
+ 
 <body>
-
+ 
     <!---------------------------------------------------------------------NAVIGATION BAR------------------------------------------------------------------------------------------------------------>
     <section>
         <header>
@@ -29,9 +29,9 @@
             </nav>
         </header>
     </section>
-
+ 
     <!---------------------------------------------------------------------WELCOME------------------------------------------------------------------------------------------------------------>
-
+ 
     <section id="gethome">
         <div class="welcomehome">
             <h1>WELCOME</h1>
@@ -67,9 +67,9 @@
             </div>
         </div>
     </section>
-
+ 
     <!------------------------------------------------------------------------SERVICES------------------------------------------------------------------------------------------------------------>
-
+ 
     <section id="getservices">
         <h1>OUR SERVICES</h1>
         <div class="first-services">
@@ -82,7 +82,7 @@
                     <a href="carwash.html" class="button">Book Service</a>
                 </div>
             </div>
-
+ 
             <div class="services">
                 <img src="img/housekeepng.webp" alt="Housekeeping" class="gallery" style="width:100%;">
                 <div class="container">
@@ -94,15 +94,15 @@
             </div>
         </div>
     </section>
-
+ 
     <!----------------------------------------------------------------------------SUBSCRIPTION------------------------------------------------------------------------------------------------------------>
-
+ 
     <section id="getsubscription">
         <div class="topsub">
             <h1>Subscribe</h1>
             <p>Subscribe to be one of our priority clients!</p>
         </div>
-
+ 
         <div class="subscription-container">
             <!-- CarWashPlan-->
             <div class="subscription-content-one">
@@ -118,11 +118,19 @@
                                 <li><span class="checkmark">✔</span>4 washes a month</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="350.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
-
+ 
                         <div class="standard-plan">
                             <p>Standard</p>
                             <ul>
@@ -131,11 +139,19 @@
                                 <li><span class="checkmark">✔</span>6 washes a month</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="550.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
-
+ 
                         <div class="advanced-plan">
                             <p>Advanced</p>
                             <ul>
@@ -144,11 +160,19 @@
                                 <li><span class="checkmark">✔</span>7 washes</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="650.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
-
+ 
                         <div class="premium-plan">
                             <p>Premium</p>
                             <ul>
@@ -158,14 +182,22 @@
                                 <li><span class="checkmark">✔</span>8 washes a month</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="1000.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
                     </div>
                 </div>
             </div>
-
+ 
             <!-- HouseKeepingPlan -->
             <div class="subscription-content-two">
                 <div class="subscription-box-two">
@@ -181,11 +213,19 @@
                                 <li><span class="checkmark">✔</span>R350.00 p/m</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="350.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
-
+ 
                         <div class="standard-plan">
                             <p>Standard</p>
                             <ul>
@@ -195,11 +235,19 @@
                                 <li><span class="checkmark">✔</span>R550.00 p/m</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="550.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
-
+ 
                         <div class="advanced-plan">
                             <p>Advanced</p>
                             <ul>
@@ -209,11 +257,19 @@
                                 <li><span class="checkmark">✔</span>R650.00 p/m</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="650.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
-
+ 
                         <div class="premium-plan">
                             <p>Premium</p>
                             <ul>
@@ -223,113 +279,124 @@
                                 <li><span class="checkmark">✔</span>Unlimited Service</li>
                                 <li><span class="checkmark">✔</span>Cancel Anytime</li>
                             </ul>
-                            <div class="subscription-button">
-                                <a href="payment.html">Select Plan</a>
-                            </div>
+                            <form id="payfast-form" action=     "https://www.payfast.co.za/eng/process" method="post">
+                                <input type="hidden" name="merchant_id" id="merchant_id" value= 25607769>
+                                <input type="hidden" name="merchant_key" id="merchant_id" value= "ghpvvcpsvldhv">
+                                <input type="hidden" name="return_url" id="return_url" value="https://careoncallserv.netlify.app/return">
+                                <input type="hidden" name="cancel_url" id="cancel_url" value="https://careoncallserv.netlify.app/cancel">
+                                <input type="hidden" name="item_name" id="item_name" value="advanced-plan">
+                                <input type="hidden" name="amount" id="amount" value="1000.00">
+                                <button type="submit" id="pay-now-button" style="display: none;">Pay Now</button>
+                                <button type="submit">Pay Now</button>
+                              </form>
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
+ 
     <!---------------------------------------------------------------------WHO WE ARE------------------------------------------------------------------------------------------------------------>
     <section id="about-us">
-        <h1>ABOUT US</h1>
-        <div class="vision-mission">
-            <div class="vision">
-                <h3>OUR VISION</h3>
-                <p>To be the leading provider of convenient, on-demand car wash and housekeeping services, transforming the way individuals maintain their spaces by bringing quality care directly to their doorsteps.</p>
-            </div>
-            <div class="mission">
-                <h3>OUR MISSION</h3>
-                <p>Our mission is to offer a seamless and user-friendly platform that delivers top-notch car wash and housekeeping services to our customers' locations. We strive to provide flexible, reliable, and high-quality service options through subscription-based and pay-as-you-go models, ensuring convenience and satisfaction for all our users, with a focus on prioritizing the needs of our subscribed members.</p>
-            </div>
+    <h1>ABOUT US</h1>
+    <div class="vision-mission">
+        <div class="vision">
+            <h3>OUR VISION</h3>
+            <p>To be the leading provider of convenient, on-demand car wash and housekeeping services, transforming the way individuals maintain their spaces by bringing quality care directly to their doorsteps.</p>
         </div>
-    </section>
-    
-    <section class="who-we-are">
-        <h1>WHO WE ARE</h1>
-        <div class="team">
-            <div class="team-member">
-                <img src="img/Image.jfif" alt="Team Member">
-                <p>Pholisa Nofemele</p>
-                <p>Project Manager</p>
-            </div>
-            <div class="team-member">
-                <img src="img/Image (1).jfif" alt="Team Member">
-                <p>Lutho Mtyelwa</p>
-                <p>Frontend Developer</p>
-            </div>
-            <div class="team-member">
-                <img src="img/member-2.jpg" alt="Team Member">
-                <p>Siyahluma Mbulali</p>
-                <p>Sales Manager</p>
-            </div>
-            <div class="team-member">
-                <img src="img/Media.jfif" alt="Team Member">
-                <p>Setu Xolilizwe</p>
-                <p>Backend Developer</p>
-            </div>
-            <div class="team-member">
-                <img src="img/member-1.jpg" alt="Team Member">
-                <p>Sandile Kitayi</p>
-                <p>Backend Developer</p>
-            </div>
-        </div>
-    </section>
-    
-    <!---------------------------------------------------------------------CONTACT US------------------------------------------------------------------------------------------------------------>
-
-    <section id="getcontacts">
-        <div class="contact-us">
-        <h1>CONTACT US</h1>
-        <p>Keep in touch with US! Should you have any queries, do not hesitate to contact us!<div>
-    
-        <div class="contactus-content">
-        <div class="contactus-box">
-        <div class="connect">
-            
-            <div class="cntct">
-                <form action="/action_page.php">
-        
-                <input type="text" id="name" placeholder="Your Name"><br>
-            
-                <input type="email" id="email"  placeholder="Your Email"><br>
-            
-                <textarea name="yourmessage" rows="4" cols="50" placeholder="Your Message"></textarea>
-        
-                <br><br>
-            </form>
-        
-            <div class="cntct-btn">
-                <a>Send</a>
-                </div>
-            </div>
-    
-            <br><br><br><br>
-    
-            <i class="fa-solid fa-envelope"></i><span>  careoncall@gmail.com</span><br><br><br>
-            <i class="fa-solid fa-phone"></i></i><span>  021 874 2873</span><br><br><br>
-            <!-- Instagram icon -->
-            <i class="fa-brands fa-square-instagram"></i>
-             <!-- Instagram handle -->
-            <span>  @careoncall</span><br><br><br>
-            <i class="fa-brands fa-square-whatsapp"></i><span>  081 564 2734</span><br><br><br>
-            <i class="fa-brands fa-facebook"></i><span>  CareOnCall</span><br><br><br>
-    
-        </div>
-    
+        <div class="mission">
+            <h3>OUR MISSION</h3>
+            <p>Our mission is to offer a seamless and user-friendly platform that delivers top-notch car wash and housekeeping services to our customers' locations. We strive to provide flexible, reliable, and high-quality service options through subscription-based and pay-as-you-go models, ensuring convenience and satisfaction for all our users, with a focus on prioritizing the needs of our subscribed members.</p>
         </div>
     </div>
 </section>
-
+ 
+<section class="who-we-are">
+    <h1>WHO WE ARE</h1>
+    <div class="team">
+        <div class="team-member">
+            <img src="img/Image.jfif" alt="Team Member">
+            <p>Pholisa Nofemele</p>
+            <p>Project Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="img/Image (1).jfif" alt="Team Member">
+            <p>Lutho Mtyelwa</p>
+            <p>Frontend Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="img/The Big Five.jpg" alt="Team Member">
+            <p>Siyahluma Mbulali</p>
+            <p>Sales Manager</p>
+        </div>
+        <div class="team-member">
+            <img src="img/Media.jfif" alt="Team Member">
+            <p>Setu Xolilizwe</p>
+            <p>Backend Developer</p>
+        </div>
+        <div class="team-member">
+            <img src="img/WhatsApp Image 2024-01-11 at 10.26.20_595bd0b3.jpg" alt="Team Member">
+            <p>Sandile Kitayi</p>
+            <p>Backend Developer</p>
+        </div>
+    </div>
+</section>
+ 
+ 
+<!---------------------------------------------------------------------CONTACT US------------------------------------------------------------------------------------------------------------>
+ 
+<section id="getcontacts">
+    <div class="contact-us">
+    <h1>CONTACT US</h1>
+    <p>Keep in touch with US! Should you have any queries, do not hesitate to contact us!<div>
+ 
+    <div class="contactus-content">
+    <div class="contactus-box">
+    <div class="connect">
+       
+        <div class="cntct">
+            <form action="/action_page.php">
+   
+            <input type="text" id="name" placeholder="Your Name"><br>
+       
+            <input type="email" id="email"  placeholder="Your Email"><br>
+       
+            <textarea name="yourmessage" rows="4" cols="50" placeholder="Your Message"></textarea>
+   
+            <br><br>
+        </form>
+   
+        <div class="cntct-btn">
+            <a>Send</a>
+            </div>
+        </div>
+ 
+        <br><br><br><br>
+ 
+        <i class="fa-solid fa-envelope"></i><span>  careoncall@gmail.com</span><br><br><br>
+        <i class="fa-solid fa-phone"></i></i><span>  021 874 2873</span><br><br><br>
+        <!-- Instagram icon -->
+        <i class="fa-brands fa-square-instagram"></i>
+         <!-- Instagram handle -->
+        <span>  @careoncall</span><br><br><br>
+        <i class="fa-brands fa-square-whatsapp"></i><span>  081 564 2734</span><br><br><br>
+        <i class="fa-brands fa-facebook"></i><span>  CareOnCall</span><br><br><br>
+ 
+    </div>
+ 
+    </div>
+</div>
+ 
+ 
+ 
+ 
     <!---------------------------------------------------------------------FOOTER------------------------------------------------------------------------------------------------------------>
-
+ 
     <footer>
         <p>&copy; 2024 CareOnCall. All Rights Reserved.</p>
     </footer>
-
+ 
 </body>
-
+ 
 </html>
