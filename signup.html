@@ -9,6 +9,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto&display=swap" rel="stylesheet">
+    
+<body>
+    <div class="reg">
+        <h1>Sign-Up</h1>
+        <form id="signup-form">
+          
+                  <p>Name:</p>
+                  <input type="text" id="name" required>
+                  <p>Email:</p>
+                  <input type="email" id="email" required>
+                  <p>Phone Number:</p>
+                  <input type="tel" id="phone" required>
+                  <p>Password:</p>
+                  <input type="password" id="password" required>
+                  <p>Confirm Password:</p>
+                  <input type="password" id="confirm-password" required>
+                  <button type="submit"><a id="signup-btns" href="Signin.html">SignUp</a></button>
+            <p id="error-message" class="messageDiv"></p>
+            <p id="success-message" class="messageDiv"></p>
+        </form>
+    </div>
 
     <!-- Firebase CDN -->
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js"></script>
@@ -17,27 +38,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore-compat.js"></script>
 
     <!-- Your App's JS -->
-    <script src="app.js" defer></script>
-</head>
-<body>
-    <div class="reg">
-        <h1>Sign-Up</h1>
-        <form id="signup-form">
-            <p>Name:</p>
-            <input type="text" id="name" required>
-            <p>Email:</p>
-            <input type="email" id="email" required>
-            <p>Phone Number:</p>
-            <input type="tel" id="phone" required>
-            <p>Password:</p>
-            <input type="password" id="password" required>
-            <p>Confirm Password:</p>
-            <input type="password" id="confirm-password" required>
-            <button type="button" onclick="window.location.href='Signin.html'"><b>Back</b></button>
-            <button type="submit" id="submitSignUp">Sign Up</button>
-            <p id="error-message" class="messageDiv"></p>
-            <p id="success-message" class="messageDiv"></p>
-        </form>
-    </div>
+    <script src="app.js"></script>
 </body>
 </html>
